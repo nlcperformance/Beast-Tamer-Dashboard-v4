@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OP: BEAST TAMER // COMMAND CONSOLE v3.5</title>
+    <title>OP: BEAST TAMER // COMMAND CONSOLE v3.7</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -107,7 +107,7 @@
                 <h1 class="text-2xl md:text-3xl font-bold text-white tracking-tighter">
                     <i class="fas fa-shield-alt mr-2 text-[#ff6300]"></i>OP: BEAST TAMER
                 </h1>
-                <span class="text-xs border border-[#ff6300] text-[#ff6300] px-2 py-1 rounded animate-pulse font-bold tracking-widest">CONSOLE V3.5</span>
+                <span class="text-xs border border-[#ff6300] text-[#ff6300] px-2 py-1 rounded animate-pulse font-bold tracking-widest">CONSOLE V3.7</span>
             </div>
             <p class="text-zinc-500 text-sm mb-4">OPERATIVE: SENTINEL (TYPE 3) | AGE: 44</p>
             <div class="grid grid-cols-2 gap-4 text-xs">
@@ -161,15 +161,12 @@
                 </div>
                 
                 <div class="grid gap-4">
-                    <!-- MON -->
+                    <!-- MON (NOW DYNAMIC) -->
                     <div class="grid grid-cols-12 gap-4 bg-zinc-900/30 p-4 border-l-4 border-[#ff6300]">
                         <div class="col-span-2 md:col-span-1 font-bold text-[#ff6300] mt-1">MON</div>
                         <div class="col-span-10 md:col-span-3 font-bold text-white mt-1 uppercase">The Wrench</div>
-                        <div class="col-span-12 md:col-span-8 text-sm text-zinc-300">
-                            <span class="protocol-header mt-0">PART A: KINETIC MAPPING</span>
-                            <span class="protocol-detail">1. <strong>Mace 360s</strong>: 3x10. 2. <strong>BU Cleans (Static Holds)</strong>: 5x20s (20kg).</span>
-                            <span class="protocol-detail">3. <strong>Statue of Liberty Walk</strong>: 3x30m @ <strong>32kg</strong>.</span>
-                            <span class="protocol-cue">GOAL: Establish symmetry and mastery of the 32kg threshold.</span>
+                        <div class="col-span-12 md:col-span-8 text-sm text-zinc-300" id="mon-protocol">
+                            <!-- JS Inject -->
                         </div>
                     </div>
 
@@ -266,13 +263,20 @@
     </main>
 
     <script>
-        // FULL MASTER PLAN DATA REINSTATED
+        // FULL MASTER PLAN DATA REINSTATED - NOW INCLUDING DYNAMIC MONDAYS
         const protocols = {
             1: {
                 title: "INTEGRITY",
                 months: {
                     FEB: {
                         focus: "Depth Charge & Tendon Hardening.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: KINETIC MAPPING</span>
+                            <span class="protocol-detail">1. <strong>Mace 360s</strong>: 3x10. 2. <strong>KB Arm-Bars</strong>: 5m/side.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 2-3 sets x 5 reps/side.</span>
+                            <span class="protocol-detail">2. <strong>Wrist Extensor Protocol</strong>.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: PRESS (32kg) & PULL (Wtd)</span>
                             <span class="protocol-detail">1. <strong>LADDER 1</strong>: 1 Rep (L/R) -> 2 Reps -> 3 Reps</span>
@@ -292,6 +296,12 @@
                     },
                     MAR: {
                         focus: "Mastering the 32kg threshold to bypass neural inhibition.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: KINETIC MAPPING</span>
+                            <span class="protocol-detail">1. <strong>Mace 360s</strong>: 3x10. 2. <strong>BU Cleans (Static Holds)</strong>: 5x20s (20kg).</span>
+                            <span class="protocol-detail">3. <strong>Statue of Liberty Walk</strong>: 3x30m @ <strong>32kg</strong>.</span>
+                            <span class="protocol-cue">NOTE: Gladiator DL removed this month to protect back from Rosslyn Park steps.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: DENSITY LADDERS (1, 2, 3)</span>
                             <span class="protocol-detail">1. <strong>Military Press</strong>: 32kg (Symmetry/Tolerance).</span>
@@ -316,7 +326,15 @@
                 title: "DENSITY & VOLUME",
                 months: {
                     APR: {
-                        focus: "Neural Density I: Cluster Initialization.",
+                        focus: "Neural Density I: Cluster Initialization & QL Armor.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: NEURAL PREP (40KG)</span>
+                            <span class="protocol-detail">1. <strong>KB Arm-Bars</strong>: 3-5m/side. Focus on centration.</span>
+                            <span class="protocol-detail">2. <strong>Statue of Liberty Walk</strong>: 3x30m @ <strong>36kg</strong>.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 3 sets x 5 reps/side (24kg+).</span>
+                            <span class="protocol-cue">GOAL: Rebuild lateral chain to stabilize 40kg press clusters.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: CLUSTERS (1.1.1)</span>
                             <span class="protocol-detail">1. <strong>Press/Pull</strong> (40kg). 1 Rep (L/R), Park 15s, Repeat 3x.</span>
@@ -333,6 +351,13 @@
                     },
                     MAY: {
                         focus: "Neural Density II: Volume Accumulation.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: SHOULDER & GRIP</span>
+                            <span class="protocol-detail">1. <strong>Light Get-Ups</strong>: 5m Continuous (16kg).</span>
+                            <span class="protocol-detail">2. <strong>Heavy Suitcase Carry</strong>: 3x30m @ <strong>40kg+</strong>.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 3 sets x 5 reps/side (32kg target).</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: EXTENDED CLUSTERS (1.1.1.1)</span>
                             <span class="protocol-detail">1. <strong>Press/Pull</strong> (40kg). 4 singles with 15s rest between.</span>
@@ -349,6 +374,14 @@
                     },
                     JUN: {
                         focus: "The Peak: Systemic Red Line.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: ISOMETRIC TENSION</span>
+                            <span class="protocol-detail">1. <strong>KB Arm-Bars</strong>: 3m/side.</span>
+                            <span class="protocol-detail">2. <strong>Static BU Rack Holds</strong>: 3x20s @ <strong>24kg</strong>.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 3 sets x 5 reps/side (Maintain).</span>
+                            <span class="protocol-cue">CUE: Keep CNS fresh for Tuesday's Big Cluster.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: BIG CLUSTER (1.1.1.1.1.1)</span>
                             <span class="protocol-detail">1. <strong>Press/Pull</strong> (44kg). 6 singles, 15s rest.</span>
@@ -371,6 +404,13 @@
                 months: {
                     JUL: {
                         focus: "Heavy Waves. Phosphagen System.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: 44KG MAPPING</span>
+                            <span class="protocol-detail">1. <strong>Mace 360s</strong>: 3x10.</span>
+                            <span class="protocol-detail">2. <strong>Static Rack Holds</strong>: 3x20s @ <strong>44kg</strong>.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 3 sets x 5 reps/side.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: WAVE LOADING (3, 2, 1)</span>
                             <span class="protocol-detail">1. <strong>Press/Pull</strong> (44kg). Wave 1 (3), Wave 2 (2), Wave 3 (1).</span>
@@ -387,6 +427,13 @@
                     },
                     AUG: {
                         focus: "Singles & Power.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: CENTRATION</span>
+                            <span class="protocol-detail">1. <strong>Light Get-Ups</strong>: 1x L/R (perfect form).</span>
+                            <span class="protocol-detail">2. <strong>Waiter Walks</strong>: 3x30m @ 24kg.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 2 sets x 5 reps/side (Tapering volume).</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: HEAVY SINGLES</span>
                             <span class="protocol-detail">1. <strong>Press/Pull</strong> (46kg). 5 sets -> 7 sets x 1 rep.</span>
@@ -403,6 +450,13 @@
                     },
                     SEP: {
                         focus: "The Beast Rehearsal.",
+                        mon: `
+                            <span class="protocol-header mt-0">PART A: BEAST MAPPING (48KG)</span>
+                            <span class="protocol-detail">1. <strong>KB Arm-Bars</strong>: 5m/side.</span>
+                            <span class="protocol-detail">2. <strong>Static Rack Holds</strong>: 3x15s @ <strong>48kg</strong>.</span>
+                            <span class="protocol-header">PART B: STRUCTURAL ARMOR</span>
+                            <span class="protocol-detail">1. <strong>Gladiator DL</strong>: 2 sets x 5 reps/side.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">BLOCK A: TEST WEIGHTS (48KG)</span>
                             <span class="protocol-detail">1. <strong>The Beast Press/Pull</strong> (48kg). 3 sets x 1 rep.</span>
@@ -424,6 +478,11 @@
                 months: {
                     OCT: {
                         focus: "14-Day COMT Taper. Unmask Fitness.",
+                        mon: `
+                            <span class="protocol-header mt-0">DECOMPRESSION ONLY</span>
+                            <span class="protocol-detail"><strong>Weeks 1 & 2:</strong> 15 mins of Shin Boxes, 90-90 breathing, and light walking.</span>
+                            <span class="protocol-cue">NO GLADIATORS. NO HEAVY LOAD. Let the CNS recover.</span>
+                        `,
                         tue: `
                             <span class="protocol-header mt-0">THE CUT & PRIME</span>
                             <span class="protocol-detail"><strong>Week 1 (50% Load):</strong> 32kg Press/Pull/Pistol. 3x3 reps. Easy.</span>
@@ -499,6 +558,8 @@
             if(!data) return;
 
             document.getElementById('current-month-label').innerText = `${currentMonthKey} // ${protocols[currentPhase].title}`;
+            // MONDAY INJECTED DYNAMICALLY HERE
+            document.getElementById('mon-protocol').innerHTML = data.mon || '<span class="text-zinc-500 italic">Protocol loading...</span>';
             document.getElementById('tue-protocol').innerHTML = data.tue;
             document.getElementById('thu-protocol').innerHTML = data.thu;
             document.getElementById('focus-text').innerText = data.focus;
